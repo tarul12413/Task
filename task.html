@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        body {
+           
+            height: 100vh;
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+.body{
+    padding-top: 40px;
+}
+        .content {
+            text-align: center;
+            margin: 0 0 40px;
+        }
+
+        .content h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 45px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .carousel-container {
+            width: min(100%, 1350px);
+            max-width: 1350px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+
+        .slick-list.draggable {
+            height: 370px;
+            padding-top: 5px !important;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0;
+        }
+
+        .slick-slide {
+            outline: none;
+            /* Remove default focus outline */
+        }
+
+        .carousel-item {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(211, 211, 211, 0.068);
+            border-radius: 15px;
+            box-shadow: 0px 0px 2px rgb(255 255 255 / 50%);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+            margin: 0 10px;
+            height: 200px;
+        }
+
+        .client-image {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .client-name {
+            font-weight: bold;
+            color: #f3f3f3;
+            margin-bottom: 5px;
+        }
+
+        .client-review {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .content h2 {
+                font-size: 30px;
+            }
+
+            .carousel-container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="body">
+        <div class="carousel-container">
+            <div class="content">
+                <h2>What users say</h2>
+                <p>Testimonials that speak louder than words! Customer stories that light up our day.</p>
+            </div>
+
+            <div class="carousel">
+                <div class="carousel-item">
+                    <img src="client1.jpg" alt="Client 1" class="client-image">
+                    <p class="client-name">John Doe</p>
+                    <p class="client-review">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
+                        sit amet, consectetur adipiscing elit."</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="client2.jpg" alt="Client 2" class="client-image">
+                    <p class="client-name">Jane Smith</p>
+                    <p class="client-review">"Pellentesque euismod justo at odio efficitur, quis tristique felis
+                        ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="client3.jpg" alt="Client 3" class="client-image">
+                    <p class="client-name">Michael Johnson</p>
+                    <p class="client-review">"Nulla facilisi. Fusce id augue eu urna consectetur pretium ut in justo.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="client4.jpg" alt="Client 4" class="client-image">
+                    <p class="client-name">Emily Brown</p>
+                    <p class="client-review">"Suspendisse malesuada neque id felis rutrum, ac varius leo volutpat. Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="client5.jpg" alt="Client 5" class="client-image">
+                    <p class="client-name">David Wilson</p>
+                    <p class="client-review">"Vestibulum tempus leo in libero facilisis congue. Praesent finibus ante
+                        vel turpis euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Disable right-click menu
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+      
+        // Prevent F12 key from opening Developer Tools
+        document.onkeydown = function(e) {
+          if (e.key === "F12") {
+            return false;
+          }
+        };
+      
+        // Prevent Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+Shift+C on Windows/Linux
+        document.addEventListener('keydown', function(e) {
+          if ((e.ctrlKey && e.shiftKey && e.key === 'I') ||
+              (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+              (e.ctrlKey && e.shiftKey && e.key === 'C')) {
+            e.preventDefault();
+          }
+        });
+      
+        // Prevent Cmd+Option+I, Cmd+Option+J, Cmd+Option+C on Mac
+        document.addEventListener('keydown', function(e) {
+          if ((e.metaKey && e.altKey && e.key === 'I') ||
+              (e.metaKey && e.altKey && e.key === 'J') ||
+              (e.metaKey && e.altKey && e.key === 'C')) {
+            e.preventDefault();
+          }
+        });
+      </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                centerMode: true,
+                speed: 3000,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: false,
+                variableWidth: false,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
+            function updateZigzag(currentSlide, nextSlide) {
+                const slickTrack = $('.slick-track');
+                const slickSlides = slickTrack.find('.slick-slide');
+                const centerIndex = nextSlide;
+
+                const animationDuration = $('.carousel').slick('slickGetOption', 'speed');
+
+                slickSlides.each(function (index, slide) {
+                    const $slide = $(slide);
+                    const distanceFromCenter = Math.abs(index - centerIndex);
+                    const translateY = (distanceFromCenter % 2 === 0 ? 0 : 120);
+                    $slide.css({
+                        'transform': `translateY(${translateY}px)`,
+                        'transition': `transform ${animationDuration}ms ease`,
+                    });
+                });
+            }
+
+            updateZigzag(0, 0);
+
+            $('.carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                updateZigzag(currentSlide, nextSlide);
+            });
+        });
+    </script>
+</body>
+
+</html>
